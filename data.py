@@ -1,4 +1,3 @@
-import h5py
 import numpy as np
 import scipy.io as sio
 from sklearn.preprocessing import MinMaxScaler
@@ -48,9 +47,38 @@ class MultiViewDataset(Dataset):
         norm_x = scaler.fit_transform(x)
         return norm_x
 
+    def postprocessing(self, index, addNoise=False, sigma=0, ratio_noise=0.5, addConflict=False, ratio_conflict=0.5):
+        if addNoise:
+            self.addNoise(index, ratio_noise, sigma=sigma)
+        if addConflict:
+            self.addConflict(index, ratio_conflict)
+        pass
+
+    def addNoise(self, index, ratio, sigma):
+        selects = np.random.choice(index, size=int(ratio * len(index)), replace=False)
+        for i in selects:
+            views = np.random.choice(np.array(self.num_views), size=np.random.randint(self.num_views), replace=False)
+            for v in views:
+                self.X[v][i] = np.random.normal(self.X[v][i], sigma)
+        pass
+
+    def addConflict(self, index, ratio):
+        records = dict()
+        for c in range(self.num_classes):
+            i = np.where(self.Y == c)[0][0]
+            temp = dict()
+            for v in range(self.num_views):
+                temp[v] = self.X[v][i]
+            records[c] = temp
+        selects = np.random.choice(index, size=int(ratio * len(index)), replace=False)
+        for i in selects:
+            v = np.random.randint(self.num_views)
+            self.X[v][i] = records[(self.Y[i] + 1) % self.num_classes][v]
+        pass
+
 
 def HandWritten():
-    # 240 76 216 47 64 6
+    # dims of views: 240 76 216 47 64 6
     data_path = "data/handwritten.mat"
     data = sio.loadmat(data_path)
     data_X = data['X'][0]
@@ -59,7 +87,7 @@ def HandWritten():
 
 
 def Scene():
-    # 20 59 40
+    # dims of views: 20 59 40
     data_path = "data/scene15_mtv.mat"
     data = sio.loadmat(data_path)
     data_X = data['X'][0]
@@ -70,7 +98,7 @@ def Scene():
 
 
 def PIE():
-    # 484 256 279
+    # dims of views: 484 256 279
     data_path = "data/PIE_face_10.mat"
     data = sio.loadmat(data_path)
     data_X = data['X'][0]
