@@ -24,7 +24,7 @@ Considering the decision of a conflictive instance might be unreliable, we need 
 2、The proposed average aggregation schema may not be the optimal solution. For example, the specific order in which fusion takes place can influence the final result. <br>
 3、 For different data sets, the results vary greatly, and we have a hypothesis that this may be related to the differences between sample categories and the number of sample views. <br>
 
-# 相关工作
+# Related work
 1、Han Z, Zhang C, Fu H, et al. Trusted Multi-View Classification[C]//International Conference on Learning Representations. 2020. <br>
 2、Sensoy M, Kaplan L, Kandemir M. Evidential deep learning to quantify classification uncertainty[J]. Advances in neural information processing systems, 2018, 31. <br>
 3、Gawlikowski J, Tassi C R N, Ali M, et al. A survey of uncertainty in deep neural networks[J]. Artificial Intelligence Review, 2023, 56(Suppl 1): 1513-1589. <br>
