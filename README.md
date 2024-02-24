@@ -25,7 +25,7 @@ Considering the decision of a conflictive instance might be unreliable, we need 
 3、 For different data sets, the results vary greatly, and we have a hypothesis that this may be related to the differences between sample categories and the number of sample views. <br>
 
 # Related work
-There are many interesting works inspired by this paper and the following are related follow-up works:
+There are many interesting works inspired by this paper and the following are related follow-up works: <br>
 1、[Zongbo Han, Changqing Zhang, Huazhu Fu and Joey Tianyi Zhou. Trusted multi-view classification. In International Conference on Learning Representations, 2021.](https://arxiv.org/abs/2102.02051) <br>
 2、[Murat Sensoy, Lance Kaplan and Melih Kandemir. Evidential deep learning to quantify classification uncertainty. In Neural Information Processing Systems, 31, 2018.](https://dl.acm.org/doi/abs/10.5555/3327144.3327239) <br>
 3、[Gawlikowski J, Tassi C R N, Ali M, et al. A survey of uncertainty in deep neural networks. In Artificial Intelligence Review, 56(Suppl 1): 1513-1589, 2023.](https://link.springer.com/article/10.1007/s10462-023-10562-9) <br>
