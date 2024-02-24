@@ -20,6 +20,18 @@ Considering the decision of a conflictive instance might be unreliable, we need 
 ![image](https://github.com/jiajunsi/RCML/assets/92369008/14f24165-8a71-48d0-8a09-7c36513f10d5)
 
 # Future Work
-1、 Conflicting multi-view data is very common in the real world, but there are currently no datasets related to it, and we are working to collect data sets and share them with everyone. 
-2、The proposed average aggregation schema may not be the optimal solution. For example, the specific order in which fusion takes place can influence the final result.
-3、 For different data sets, the results vary greatly, and we have a hypothesis that this may be related to the differences between sample categories and the number of sample views
+1、 Conflicting multi-view data is very common in the real world, but there are currently no datasets related to it, and we are working to collect data sets and share them with everyone.  
+2、The proposed average aggregation schema may not be the optimal solution. For example, the specific order in which fusion takes place can influence the final result. 
+3、 For different data sets, the results vary greatly, and we have a hypothesis that this may be related to the differences between sample categories and the number of sample views. 
+
+# 相关工作
+1、Han Z, Zhang C, Fu H, et al. Trusted Multi-View Classification[C]//International Conference on Learning Representations. 2020. 
+2、Sensoy M, Kaplan L, Kandemir M. Evidential deep learning to quantify classification uncertainty[J]. Advances in neural information processing systems, 2018, 31. 
+3、Gawlikowski J, Tassi C R N, Ali M, et al. A survey of uncertainty in deep neural networks[J]. Artificial Intelligence Review, 2023, 56(Suppl 1): 1513-1589. 
+4、Danruo D, Chen G, Yang Y U, et al. Uncertainty Estimation by Fisher Information-based Evidential Deep Learning[J]. 2023. 
+5、Jøsang A. Subjective logic[M]. Cham: Springer, 2016. 
+6、Liu J, Liu X, Yang Y, et al. Contrastive Multi-View Kernel Learning[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023. 
+7、Huang Z, Hu P, Zhou J T, et al. Partially view-aligned clustering[J]. Advances in Neural Information Processing Systems, 2020, 33: 2892-2902. 
+8、Malinin A, Gales M. Predictive uncertainty estimation via prior networks[J]. Advances in neural information processing systems, 2018, 31. 
+9、Dong W, Sun S. Multi-View Deep Gaussian Processes for Supervised Learning[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023. 
+10、Wen J, Zhang Z, Fei L, et al. A survey on incomplete multiview clustering[J]. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2022, 53(2): 1136-1149.
